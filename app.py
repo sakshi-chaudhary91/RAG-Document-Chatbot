@@ -1,7 +1,6 @@
 import streamlit as st
 from utils.pdf_reader import extract_text
 
-# Page config
 st.set_page_config(
     page_title="RAG Document Chatbot",
     page_icon="📄",
@@ -10,21 +9,28 @@ st.set_page_config(
 
 st.title("📄 RAG Document Chatbot")
 
-# Upload PDF
 uploaded_file = st.file_uploader("Upload your PDF", type=["pdf"])
 
 if uploaded_file is not None:
 
-    # Extract text
-    text = extract_text(uploaded_file)
+    text, pages, word_count = extract_text(uploaded_file)
 
-    st.success("PDF uploaded successfully!")
+    st.success("PDF processed successfully!")
 
-    # Show text
-    st.subheader("📄 Extracted PDF Content")
+    # 📊 Stats
+    col1, col2 = st.columns(2)
+
+    with col1:
+        st.metric("Pages", pages)
+
+    with col2:
+        st.metric("Words", word_count)
+
+    # 📄 Preview
+    st.subheader("Text Preview")
 
     st.text_area(
-        "Content",
-        text,
-        height=500
+        "Preview",
+        text[:2000],   
+        height=400
     )
