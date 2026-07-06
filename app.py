@@ -1,5 +1,6 @@
 import streamlit as st
 from utils.pdf_reader import extract_text, keyword_search
+from utils.embeddings import generate_embedding
 
 # Page config
 st.set_page_config(
@@ -17,6 +18,7 @@ if uploaded_file is not None:
 
     # Extract text
     text, pages, word_count = extract_text(uploaded_file)
+    embedding = generate_embedding(text[:500])
 
     st.success("PDF processed successfully!")
 
@@ -32,6 +34,11 @@ if uploaded_file is not None:
     # 📄 Preview
     st.subheader("Text Preview")
     st.text_area("Preview", text[:2000], height=300)
+    st.subheader("Embedding Information")
+    st.write(f"Embedding Dimension: {len(embedding)}")
+    st.write("First 10 Values:")
+    st.write(embedding[:10])
+
 
     # 🔍 Question section
     st.subheader("Ask a Question")
