@@ -1,6 +1,6 @@
 import streamlit as st
 from utils.pdf_reader import extract_text, keyword_search
-from utils.embeddings import generate_embedding
+from utils.embeddings import generate_embedding, generate_embeddings
 from utils.text_splitter import chunk_text
 
 # Page config
@@ -20,7 +20,7 @@ if uploaded_file is not None:
     # Extract text
     text, pages, word_count = extract_text(uploaded_file)
     chunks = chunk_text(text)
-    embedding = generate_embedding(text[:500])
+    embeddings = generate_embeddings(chunks)
 
     st.success("PDF processed successfully!")
 
@@ -43,11 +43,11 @@ if uploaded_file is not None:
       st.write(f"### Chunk {i+1}")
       st.write(chunk)
       st.write("---")
-    st.subheader("Embedding Information")
-    st.write(f"Embedding Dimension: {len(embedding)}")
-    st.write("First 10 Values:")
-    st.write(embedding[:10])
-
+    st.subheader("📊 Embedding Information")
+    st.write(f"Total Embeddings: {len(embeddings)}")
+    st.write(f"Embedding Dimension: {len(embeddings[0])}")
+    st.write("First Embedding (First 10 Values):")
+    st.write(embeddings[0][:10])
 
     # 🔍 Question section
     st.subheader("Ask a Question")
