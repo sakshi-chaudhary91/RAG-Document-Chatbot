@@ -2,6 +2,7 @@ import streamlit as st
 from utils.pdf_reader import extract_text, keyword_search
 from utils.embeddings import generate_embedding, generate_embeddings
 from utils.text_splitter import chunk_text
+from utils.vector_store import create_faiss_index
 
 # Page config
 st.set_page_config(
@@ -21,6 +22,7 @@ if uploaded_file is not None:
     text, pages, word_count = extract_text(uploaded_file)
     chunks = chunk_text(text)
     embeddings = generate_embeddings(chunks)
+    index = create_faiss_index(embeddings)
 
     st.success("PDF processed successfully!")
 
@@ -36,6 +38,9 @@ if uploaded_file is not None:
     # 📄 Preview
     st.subheader("Text Preview")
     st.text_area("Preview", text[:2000], height=300)
+
+#--------Chunk Information----------------
+
     st.subheader("📑 Chunk Information")
     st.write(f"Total Chunks: {len(chunks)}")
     st.write("First 3 Chunks:")
@@ -43,11 +48,19 @@ if uploaded_file is not None:
       st.write(f"### Chunk {i+1}")
       st.write(chunk)
       st.write("---")
+
+# -------------Embeddings Information--------
+
     st.subheader("📊 Embedding Information")
     st.write(f"Total Embeddings: {len(embeddings)}")
     st.write(f"Embedding Dimension: {len(embeddings[0])}")
     st.write("First Embedding (First 10 Values):")
     st.write(embeddings[0][:10])
+
+##-------- FAISS Information ----------
+
+    st.subheader("FAISS Index Information")
+    st.write(f"Total Vectors in Index: {index.ntotal}")
 
     # 🔍 Question section
     st.subheader("Ask a Question")
