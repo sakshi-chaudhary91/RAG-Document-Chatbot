@@ -72,27 +72,28 @@ This project is being developed step by step to understand every concept of the 
 
 RAG_Document_Chatbot/
 │
-├── app.py
-├── requirements.txt
-├── README.md
-├── .env
-├── .gitignore
+├── app.py                  
+├── README.md               
+├── requirements.txt        
+├── .gitignore              
+├── .env                    
 │
 ├── uploads/
 │
 └── utils/
-    ├── pdf_reader.py
-    ├── embeddings.py
-    ├── text_splitter.py
-    ├── vector_store.py
-    ├── search.py
-    ├── llm.py
+    ├── pdf_reader.py       
+    ├── text_splitter.py    
+    ├── embeddings.py       
+    ├── vector_store.py     
+    ├── search.py           
+    └── llm.py              
            
 
 
 ---
 
 # 🏗️ RAG Pipeline
+''''text
 
                 PDF Upload
                      │
@@ -128,6 +129,7 @@ RAG_Document_Chatbot/
                      │
                      ▼
          AI Generated Response
+''''
 
 ---
 
@@ -148,6 +150,7 @@ RAG_Document_Chatbot/
 # ⚙️ Installation
 
 git clone <https://github.com/sakshi-chaudhary91/RAG-Document-Chatbot.git>
+
 cd RAG_Document_Chatbot
 
 pip install -r requirements.txt
