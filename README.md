@@ -1,10 +1,8 @@
 # 📄 RAG Document Chatbot
 
-```text
 A Retrieval-Augmented Generation (RAG) based chatbot that allows users to upload PDF documents and ask questions based on the document content.
 
 This project is being developed step by step to understand every concept of the RAG pipeline, including text extraction, chunking, embeddings, vector databases, semantic search, and LLM integration.
-``` 
 
 ---
 
