@@ -53,6 +53,18 @@ This project is being developed step by step to understand every concept of the 
 - Added all document embeddings to the index
 - Displayed total vectors stored in the FAISS index
 
+### ✅ Version 4.4
+- Semantic Search using FAISS
+- Retrieve Top Relevant Chunks
+- Display Retrieved Chunks
+
+### ✅ Version 5
+- Google Gemini 2.5 Flash Integration
+- Prompt Engineering for Context-Aware Responses
+- AI-Generated Answers from Retrieved Context
+- "Get AI Answer" Button
+- Loading Spinner during Response Generation
+
 
 ---
 
@@ -60,21 +72,21 @@ This project is being developed step by step to understand every concept of the 
 
 RAG_Document_Chatbot/
 │
-├── app.py
-├── README.md
-├── requirements.txt
-├── .gitignore
-├── .env
-│
-├── uploads/
+├── app.py                 
+├── README.md              
+├── requirements.txt       
+├── .gitignore             
+├── .env                   
+├── uploads/               
 │
 └── utils/
-    ├── pdf_reader.py
-    ├── text_splitter.py
-    ├── embeddings.py
-    ├── vector_store.py
-    ├── search.py
-    └── llm.py
+    ├── pdf_reader.py      
+    ├── text_splitter.py   
+    ├── embeddings.py      
+    ├── vector_store.py    
+    ├── search.py          
+    └── llm.py             
+
 
 ---
 
@@ -126,18 +138,39 @@ RAG_Document_Chatbot/
 - Google Gemini 2.5 Flash
 - NumPy
 - PDFPlumber
+- python-dotenv
 
 ---
 
 # ⚙️ Installation
 
-git clone <https://github.com/sakshi-chaudhary91/RAG-Document-Chatbot.git>
+1. Clone the repository
+
+git clone https://github.com/sakshi-chaudhary91/RAG-Document-Chatbot.git
+
+2. Navigate to the project directory
 
 cd RAG_Document_Chatbot
 
+3. Create a virtual environment 
+
+python -m venv .venv
+.venv\Scripts\activate
+
+4. Install the required dependencies
+
 pip install -r requirements.txt
 
+5. Configure your Gemini API Key
+
+Create a ".env" file in the project root and add:
+
+GEMINI_API_KEY=your_api_key_here
+
+6. Run the application
+
 streamlit run app.py
+
 
 ---
 
