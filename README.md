@@ -71,23 +71,23 @@ This project is being developed step by step to understand every concept of the 
 
 # 📂 Project Structure
 
+```text
 RAG_Document_Chatbot/
 │
-├── app.py                  
-├── README.md               
-├── requirements.txt        
-├── .gitignore              
-├── .env                    
-│
+├── app.py
+├── README.md
+├── requirements.txt
+├── .gitignore
+├── .env
 ├── uploads/
-│
 └── utils/
-    ├── pdf_reader.py       
-    ├── text_splitter.py    
-    ├── embeddings.py       
-    ├── vector_store.py     
-    ├── search.py           
-    └── llm.py                
+    ├── pdf_reader.py
+    ├── text_splitter.py
+    ├── embeddings.py
+    ├── vector_store.py
+    ├── search.py
+    └── llm.py
+```             
            
 
 
@@ -95,42 +95,42 @@ RAG_Document_Chatbot/
 
 # 🏗️ RAG Pipeline
 
-
-                PDF Upload
-                     │
-                     ▼
-            Extract Text from PDF
-                     │
-                     ▼
-              Split into Chunks
-                     │
-                     ▼
-        Generate Text Embeddings
-                     │
-                     ▼
-          Store in FAISS Index
-                     │
-                     ▼
-             User Asks Question
-                     │
-                     ▼
-      Generate Question Embedding
-                     │
-                     ▼
-        Semantic Search (FAISS)
-                     │
-                     ▼
-      Retrieve Top Relevant Chunks
-                     │
-                     ▼
-         Prompt Engineering
-                     │
-                     ▼
-         Gemini 2.5 Flash LLM
-                     │
-                     ▼
-         AI Generated Response
-
+```text
+PDF Upload
+    │
+    ▼
+Extract Text from PDF
+    │
+    ▼
+Split into Chunks
+    │
+    ▼
+Generate Text Embeddings
+    │
+    ▼
+Store in FAISS Index
+    │
+    ▼
+User Asks Question
+    │
+    ▼
+Generate Question Embedding
+    │
+    ▼
+Semantic Search (FAISS)
+    │
+    ▼
+Retrieve Top Relevant Chunks
+    │
+    ▼
+Prompt Engineering
+    │
+    ▼
+Gemini 2.5 Flash LLM
+    │
+    ▼
+AI Generated Response
+```
 
 ---
 
@@ -150,13 +150,19 @@ RAG_Document_Chatbot/
 
 # ⚙️ Installation
 
-git clone <https://github.com/sakshi-chaudhary91/RAG-Document-Chatbot.git>
+```bash
+# Clone the repository
+git clone https://github.com/sakshi-chaudhary91/RAG-Document-Chatbot.git
 
+# Navigate to the project directory
 cd RAG_Document_Chatbot
 
+# Install dependencies
 pip install -r requirements.txt
 
+# Run the application
 streamlit run app.py
+```
 
 ---
 
