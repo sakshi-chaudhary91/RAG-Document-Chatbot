@@ -1,119 +1,122 @@
-# 📄 RAG Document Chatbot
+📄 AI Document Chatbot using RAG
 
-A Retrieval-Augmented Generation (RAG) based chatbot that allows users to upload PDF documents and ask questions based on the document content.
-
-This project is being developed step by step to understand every concept of the RAG pipeline, including text extraction, chunking, embeddings, vector databases, semantic search, and LLM integration.
+An AI-powered Document Chatbot built with Streamlit, Sentence Transformers, FAISS, and Google Gemini. Upload a PDF, ask questions in natural language, and receive context-aware AI-generated answers using a Retrieval-Augmented Generation (RAG) pipeline.
 
 ---
 
-## 🚀 Features Implemented
+🚀 Features
 
-### ✅ Version 1
-- PDF Upload
-- PDF Text Extraction
-- Text Preview
-
-### ✅ Version 2
-- Keyword Search
-- Question Input
-- Display Relevant Sentences
-
-### ✅ Version 3
-- Sentence Transformer Embeddings
-- Embedding Generation
-- Embedding Information Display
-
-### ✅ Version 4.1
-- Text Chunking
-- Display Total Chunks
-- Preview First Three Chunks
-
-### ✅ Version 4.2
-- Generate Embeddings for Every Chunk
-- Store Embeddings in a List
-- Display Total Embeddings
-- Display Embedding Dimension
-
-### ✅ Version 4.3
-- Implemented FAISS Vector Database
-- Created FAISS Index using IndexFlatL2
-- Added all document embeddings to the index
-- Displayed total vectors stored in the FAISS index
-
-### ✅ Version 4.4
-- Implemented semantic search using FAISS
-- Generated embeddings for user queries
-- Retrieved Top-K relevant document chunks
-- Replaced keyword search with semantic search
+- 📄 Upload PDF documents
+- ✂️ Automatic text chunking
+- 🧠 Sentence Transformer embeddings
+- 🗂️ FAISS vector database
+- 🔍 Semantic search
+- 🤖 AI-generated answers using Gemini 2.5 Flash
+- 📌 Displays retrieved document chunks
+- ⚡ Interactive Streamlit interface
 
 ---
 
-## 📂 Project Structure
+🏗️ RAG Pipeline
 
-```text
+PDF Upload
+      ↓
+Text Extraction
+      ↓
+Text Chunking
+      ↓
+Generate Embeddings
+      ↓
+Store Embeddings in FAISS
+      ↓
+User Question
+      ↓
+Question Embedding
+      ↓
+Semantic Search
+      ↓
+Retrieve Top Relevant Chunks
+      ↓
+Gemini 2.5 Flash
+      ↓
+AI Generated Answer
+
+---
+
+🛠️ Tech Stack
+
+- Python
+- Streamlit
+- Sentence Transformers
+- FAISS
+- Google Gemini 2.5 Flash
+- NumPy
+- PDFPlumber
+
+---
+
+📂 Project Structure
+
 RAG_Document_Chatbot/
 │
 ├── app.py
-├── requirements.txt
 ├── README.md
+├── requirements.txt
+├── .env
+├── .gitignore
 │
 ├── uploads/
 │
 └── utils/
     ├── pdf_reader.py
-    ├── embeddings.py
     ├── text_splitter.py
+    ├── embeddings.py
     ├── vector_store.py
     ├── search.py
-
-```
-
----
-
-## 🛠️ Tech Stack
-
-- Python
-- Streamlit
-- PDFPlumber
-- Sentence Transformers
-- FAISS 
-- NumPy
+    └── llm.py
 
 ---
 
-## 🔄 RAG Pipeline
+⚙️ Installation
 
-```text
-PDF Upload
-      ↓
-Text Extraction
-      ↓
-Chunking
-      ↓
-Embeddings
-      ↓
-FAISS Vector Database
-      ↓
-Semantic Search
-      ↓
-LLM
-      ↓
-Final Response
-```
+git clone <https://github.com/sakshi-chaudhary91/RAG-Document-Chatbot.git>
+cd RAG_Document_Chatbot
+
+pip install -r requirements.txt
+
+streamlit run app.py
 
 ---
 
-## 📌 Upcoming Features
+📸 Current Features
 
-- Gemini API Integration
-- AI-Powered Question Answering
+- ✅ PDF Upload
+- ✅ Text Extraction
+- ✅ Text Chunking
+- ✅ Embedding Generation
+- ✅ FAISS Vector Index
+- ✅ Semantic Search
+- ✅ Prompt Engineering
+- ✅ Gemini LLM Integration
+- ✅ AI Answer Generation
+
+---
+
+🔮 Future Improvements
+
 - Chat History
 - Multiple PDF Support
+- Conversation Memory
+- Source Citations
+- Response Caching
+- Download Answer as PDF
+- Copy Answer Button
+- Streaming AI Responses
 
 ---
 
-## 👩‍💻 Author
+👩‍💻 Author
 
-**Sakshi Chaudhary**
+Sakshi Chaudhary
 
-B.Tech (CSE - AI/ML)
+AI/ML & Generative AI Enthusiast

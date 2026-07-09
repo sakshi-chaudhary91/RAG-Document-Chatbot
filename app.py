@@ -4,6 +4,7 @@ from utils.embeddings import generate_embedding, generate_embeddings
 from utils.text_splitter import chunk_text
 from utils.vector_store import create_faiss_index
 from utils.search import semantic_search
+from utils.llm import generate_answer
 
 # Page config
 st.set_page_config(
@@ -63,25 +64,47 @@ if uploaded_file is not None:
     st.subheader("FAISS Index Information")
     st.write(f"Total Vectors in Index: {index.ntotal}")
 
-    # 🔍 Question section
+    # 🔍 Question Section
     st.subheader("Ask a Question")
+    query = st.text_input(
+       "Enter your question",
+        key="user_question"
+     )
 
-    query = st.text_input("Enter your question")
+    col1, col2 = st.columns(2)
+    with col1:
+      ask = st.button("🤖 Get AI Answer")
 
-    if query:
+    with col2:
+      clear = st.button("🗑️ Clear Question")
 
-        results = semantic_search(query, index, chunks)
+    if clear:
+      st.session_state.user_question = ""
+      st.rerun()
 
-        st.write("### 🔎 Answer")
+    if ask:
 
-        if results:
-            st.write("#### 📌 Relevant Sentences:")
-            for i, res in enumerate(results):
-                st.write(f"{i+1}. {res}")
+       if query.strip():
+          results = semantic_search(query, index, chunks)
+          if results:
+            context = "\n\n".join(results)
+            with st.spinner("🤖 Generating AI Answer..."):
+                ai_answer = generate_answer(context, query)
 
-            st.write("---")
-            st.write("#### 💡 Final Answer:")
-            st.write("\n\n".join(results))
+            st.success("Answer Generated Successfully!")
 
-        else:
-            st.warning("No relevant information found in document")
+            st.write("### 📌 Retrieved Chunks")
+
+            for i, res in enumerate(results, 1):
+                st.write(f"**Chunk {i}:**")
+                st.write(res)
+                st.write("---")
+
+            st.write("## 🤖 AI Answer")
+            st.write(ai_answer)
+
+          else:
+            st.warning("No relevant information found in the document.")
+
+       else:
+          st.warning("Please enter a question.")

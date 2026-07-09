@@ -2,5 +2,7 @@ streamlit
 pdfplumber
 sentence-transformers
 faiss-cpu
-torch
 numpy
+torch
+google-genai
+python-dotenv

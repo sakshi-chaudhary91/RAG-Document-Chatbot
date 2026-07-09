@@ -1,4 +1,21 @@
-venv/
+# Virtual Environment
+.venv/
+
+# Python Cache
 __pycache__/
 *.pyc
+
+# Environment Variables
+.env
+
+# Streamlit
+.streamlit/
+
+# VS Code
+.vscode/
+
+# Uploaded PDFs
 uploads/
+
+# OS Files
+.DS_Store
