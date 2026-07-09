@@ -68,6 +68,7 @@ This project is being developed step by step to understand every concept of the 
 
 ---
 
+
 # 📂 Project Structure
 
 RAG_Document_Chatbot/
@@ -86,7 +87,7 @@ RAG_Document_Chatbot/
     ├── embeddings.py       
     ├── vector_store.py     
     ├── search.py           
-    └── llm.py              
+    └── llm.py                
            
 
 
