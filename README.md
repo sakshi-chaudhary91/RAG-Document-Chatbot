@@ -93,7 +93,7 @@ RAG_Document_Chatbot/
 ---
 
 # 🏗️ RAG Pipeline
-''''text
+
 
                 PDF Upload
                      │
@@ -129,7 +129,7 @@ RAG_Document_Chatbot/
                      │
                      ▼
          AI Generated Response
-''''
+
 
 ---
 
@@ -156,21 +156,6 @@ cd RAG_Document_Chatbot
 pip install -r requirements.txt
 
 streamlit run app.py
-
-
----
-
-# 📌 Current Features 
-
-- ✅ PDF Upload
-- ✅ PDF Text Extraction
-- ✅ Text Chunking
-- ✅ Embedding Generation
-- ✅ FAISS Vector Database
-- ✅ Semantic Search
-- ✅ Prompt Engineering
-- ✅ Gemini LLM Integration
-- ✅ AI Answer Generation
 
 ---
 
