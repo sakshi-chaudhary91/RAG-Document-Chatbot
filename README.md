@@ -23,7 +23,7 @@ This project is being developed step by step to understand every concept of the 
 
 ## 🚀 Features Implemented
 
-```text
+
 ### ✅ Version 1
 - PDF Upload
 - PDF Text Extraction
@@ -61,20 +61,29 @@ This project is being developed step by step to understand every concept of the 
 - Retrieve Top Relevant Chunks
 - Display Retrieved Chunks
 
-### ✅ Version 5
+### ✅ Version 5.1
 - Google Gemini 2.5 Flash Integration
 - Prompt Engineering for Context-Aware Responses
 - AI-Generated Answers from Retrieved Context
 - "Get AI Answer" Button
 - Loading Spinner during Response Generation
 
-### ✅ Version 5.1
+### ✅ Version 5.2
 
 - Added Exception Handling using "try-except"
 - Display User-Friendly Error Messages
 - Cached Sentence Transformer Model using "@st.cache_resource"
 - Improved Application Performance
-``` 
+
+### ✅ Version 5.3
+
+- Added Chat History using st.session_state
+- Stored Previous Questions and AI Answers
+- Displayed Conversation History
+- Added Clear Question Button
+- Added Clear Chat Button
+- Improved Chatbot User Experience
+
 
 ---
 
