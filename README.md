@@ -67,6 +67,13 @@ This project is being developed step by step to understand every concept of the 
 - AI-Generated Answers from Retrieved Context
 - "Get AI Answer" Button
 - Loading Spinner during Response Generation
+
+### ✅ Version 5.1
+
+- Added Exception Handling using "try-except"
+- Display User-Friendly Error Messages
+- Cached Sentence Transformer Model using "@st.cache_resource"
+- Improved Application Performance
 ``` 
 
 ---

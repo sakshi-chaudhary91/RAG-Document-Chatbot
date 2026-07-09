@@ -24,10 +24,22 @@ Context:
 Question:
 {question}
 """
-
-    response = client.models.generate_content(
+    
+    try:
+        response = client.models.generate_content(
         model="gemini-2.5-flash",
         contents=prompt
     )
+        return response.text 
+    except Exception as e:
+        error = str(e)
+        if "429" in error:
+            return "⚠️ API quota exceeded. Please try again later."
+        elif "API_KEY" in error or "401" in error:
+            return "🔑 Invalid API Key."
+        elif "503" in error:
+            return "🌐 Gemini service is temporarily unavailable."
+        else:
+            return f"❌ Something went wrong: {error}"
 
-    return response.text
+       
