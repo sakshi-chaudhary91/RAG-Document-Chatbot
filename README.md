@@ -1,13 +1,16 @@
 # 📄 RAG Document Chatbot
 
+```text
 A Retrieval-Augmented Generation (RAG) based chatbot that allows users to upload PDF documents and ask questions based on the document content.
 
 This project is being developed step by step to understand every concept of the RAG pipeline, including text extraction, chunking, embeddings, vector databases, semantic search, and LLM integration.
+``` 
 
 ---
 
 # ✨ Features
 
+```text
 - 📄 Upload PDF Documents
 - ✂️ Automatic Text Chunking
 - 🧠 Sentence Transformer Embeddings
@@ -16,11 +19,13 @@ This project is being developed step by step to understand every concept of the 
 - 🤖 AI-powered Answers using Gemini 2.5 Flash
 - 📌 Display Retrieved Chunks
 - ⚡ Interactive Streamlit Interface
+``` 
 
 ---
 
 ## 🚀 Features Implemented
 
+```text
 ### ✅ Version 1
 - PDF Upload
 - PDF Text Extraction
@@ -64,7 +69,7 @@ This project is being developed step by step to understand every concept of the 
 - AI-Generated Answers from Retrieved Context
 - "Get AI Answer" Button
 - Loading Spinner during Response Generation
-
+``` 
 
 ---
 
@@ -136,6 +141,7 @@ AI Generated Response
 
 # 🛠️ Tech Stack
 
+```text
 - Python
 - Streamlit
 - Sentence Transformers
@@ -144,6 +150,7 @@ AI Generated Response
 - NumPy
 - PDFPlumber
 - python-dotenv
+``` 
 
 ---
 
@@ -168,6 +175,7 @@ streamlit run app.py
 
 # 🚀 Future Improvements
 
+```text
 - 💬 Chat History
 - 📚 Multiple PDF Support
 - 📝 Source Citations
@@ -176,13 +184,16 @@ streamlit run app.py
 - 📋 Copy Answer Button
 - 🎨 ChatGPT-style UI
 - 🔄 Streaming AI Responses
+``` 
 
 ---
 
 # 👩‍💻 Author
 
+```text
 Sakshi Chaudhary
 
 B.Tech (CSE - AI/ML)
 
 Passionate about Artificial Intelligence, Machine Learning, Generative AI, and Large Language Models.
+``` 
