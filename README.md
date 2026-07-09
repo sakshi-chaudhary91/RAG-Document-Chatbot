@@ -72,20 +72,22 @@ This project is being developed step by step to understand every concept of the 
 
 RAG_Document_Chatbot/
 │
-├── app.py                 
-├── README.md              
-├── requirements.txt       
-├── .gitignore             
-├── .env                   
-├── uploads/               
+├── app.py
+├── requirements.txt
+├── README.md
+├── .env
+├── .gitignore
+│
+├── uploads/
 │
 └── utils/
-    ├── pdf_reader.py      
-    ├── text_splitter.py   
-    ├── embeddings.py      
-    ├── vector_store.py    
-    ├── search.py          
-    └── llm.py             
+    ├── pdf_reader.py
+    ├── embeddings.py
+    ├── text_splitter.py
+    ├── vector_store.py
+    ├── search.py
+    ├── llm.py
+           
 
 
 ---
@@ -142,32 +144,13 @@ RAG_Document_Chatbot/
 
 ---
 
+
 # ⚙️ Installation
 
-1. Clone the repository
-
-git clone https://github.com/sakshi-chaudhary91/RAG-Document-Chatbot.git
-
-2. Navigate to the project directory
-
+git clone <https://github.com/sakshi-chaudhary91/RAG-Document-Chatbot.git>
 cd RAG_Document_Chatbot
 
-3. Create a virtual environment 
-
-python -m venv .venv
-.venv\Scripts\activate
-
-4. Install the required dependencies
-
 pip install -r requirements.txt
-
-5. Configure your Gemini API Key
-
-Create a ".env" file in the project root and add:
-
-GEMINI_API_KEY=your_api_key_here
-
-6. Run the application
 
 streamlit run app.py
 
