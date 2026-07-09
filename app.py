@@ -3,6 +3,7 @@ from utils.pdf_reader import extract_text, keyword_search
 from utils.embeddings import generate_embedding, generate_embeddings
 from utils.text_splitter import chunk_text
 from utils.vector_store import create_faiss_index
+from utils.search import semantic_search
 
 # Page config
 st.set_page_config(
@@ -69,7 +70,7 @@ if uploaded_file is not None:
 
     if query:
 
-        results = keyword_search(text, query)
+        results = semantic_search(query, index, chunks)
 
         st.write("### 🔎 Answer")
 
@@ -84,7 +85,3 @@ if uploaded_file is not None:
 
         else:
             st.warning("No relevant information found in document")
-
-            st.write("---")
-            st.write("#### 📄 Document Summary:")
-            st.write(text[:800])

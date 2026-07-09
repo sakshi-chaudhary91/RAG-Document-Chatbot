@@ -40,6 +40,12 @@ This project is being developed step by step to understand every concept of the 
 - Added all document embeddings to the index
 - Displayed total vectors stored in the FAISS index
 
+### ✅ Version 4.4
+- Implemented semantic search using FAISS
+- Generated embeddings for user queries
+- Retrieved Top-K relevant document chunks
+- Replaced keyword search with semantic search
+
 ---
 
 ## 📂 Project Structure
@@ -58,6 +64,7 @@ RAG_Document_Chatbot/
     ├── embeddings.py
     ├── text_splitter.py
     ├── vector_store.py
+    ├── search.py
 
 ```
 
@@ -98,9 +105,6 @@ Final Response
 
 ## 📌 Upcoming Features
 
-
-- Semantic Search
-- Retrieve Top-K Chunks
 - Gemini API Integration
 - AI-Powered Question Answering
 - Chat History
