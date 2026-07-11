@@ -9,14 +9,18 @@ This project is being developed step by step to understand every concept of the 
 # ✨ Features
 
 ```text
-- 📄 Upload PDF Documents
-- ✂️ Automatic Text Chunking
-- 🧠 Sentence Transformer Embeddings
-- 🗂️ FAISS Vector Database
-- 🔍 Semantic Search
-- 🤖 AI-powered Answers using Gemini 2.5 Flash
-- 📌 Display Retrieved Chunks
-- ⚡ Interactive Streamlit Interface
+-📄 Upload Multiple PDF Documents
+-📑 Automatic PDF Text Extraction
+-✂️ Smart Text Chunking
+-🧠 Sentence Embedding Generation
+-🗂️ FAISS Vector Database
+-🔍 Semantic Search
+-🤖 AI Answer Generation using Gemini 2.5 Flash
+-⚡ Streaming AI Response 
+-💬 Chat History
+-📌 View Retrieved Source Chunks
+-📊 Document Statistics (Pages & Words)
+-🎨 Modern Streamlit Interface
 ``` 
 
 ---
@@ -105,6 +109,9 @@ This project is being developed step by step to understand every concept of the 
 - Automatically merges text from all uploaded documents.
 - Creates a single FAISS index from all documents.
 - Ask questions across multiple PDFs simultaneously.
+
+### ✅ Version 6
+- Update streamlit UI.
 
 
 ---
