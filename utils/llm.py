@@ -32,6 +32,8 @@ Question:
     )
         return response.text 
     except Exception as e:
+        import traceback
+        traceback.print_exc()
         error = str(e)
         if "429" in error:
             return "⚠️ API quota exceeded. Please try again later."

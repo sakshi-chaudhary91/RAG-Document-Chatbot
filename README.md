@@ -84,6 +84,14 @@ This project is being developed step by step to understand every concept of the 
 - Added Clear Chat Button
 - Improved Chatbot User Experience
 
+### ✅ Version 5.4
+
+- Added Expandable Retrieved Chunks using `st.expander`
+- Improved AI Answer UI using `st.info`
+- Enhanced Chunk Display Formatting
+- Added RAG Information Caption
+- Improved Overall User Interface
+
 
 ---
 
@@ -190,7 +198,6 @@ streamlit run app.py
 # 🚀 Future Improvements
 
 ```text
-- 💬 Chat History
 - 📚 Multiple PDF Support
 - 📝 Source Citations
 - ⚡ Embedding & FAISS Caching

@@ -95,13 +95,14 @@ if uploaded_file is not None:
                          "answer": ai_answer
                          })
                     st.success("Answer Generated Successfully!")
-                    st.write("### 📌 Retrieved Chunks")
-                    for i, res in enumerate(results, 1):
-                        st.write(f"**Chunk {i}:**")
-                        st.write(res)
-                        st.write("---")
-                    st.write("## 🤖 AI Answer")
-                    st.write(ai_answer)
+                    st.caption("💡 Answer generated using Retrieval-Augmented Generation (RAG) with Google Gemini 2.5 Flash.")
+                    with st.expander("📌 View Retrieved Chunks"):
+                        for i, res in enumerate(results, 1):
+                            st.markdown(f"**Chunk {i}:**")
+                            st.info(res)
+                        
+                    st.subheader("🤖 AI Answer")
+                    st.info(ai_answer)
             else:
                 st.warning("No relevant information found in the document.")
         else:
