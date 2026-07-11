@@ -18,13 +18,24 @@ if "chat_history" not in st.session_state:
    st.session_state.chat_history = []
 
 # Upload PDF
-uploaded_file = st.file_uploader("Upload your PDF", type=["pdf"])
+uploaded_files = st.file_uploader(
+    "📄 Upload PDF Documents",
+    type="pdf",
+    accept_multiple_files=True
+)
 
-if uploaded_file is not None:
+if uploaded_files:
 
     # Extract text
-    text, pages, word_count = extract_text(uploaded_file)
-    chunks = chunk_text(text)
+    all_text = ""
+    total_pages = 0
+    total_word_count = 0
+    for pdf in uploaded_files:
+        text, pages, word_count = extract_text(pdf)
+        all_text += text + "\n\n"
+        total_pages += pages
+        total_word_count += word_count
+    chunks = chunk_text(all_text)
     embeddings = generate_embeddings(chunks)
     index = create_faiss_index(embeddings)
 
@@ -34,14 +45,14 @@ if uploaded_file is not None:
     col1, col2 = st.columns(2)
 
     with col1:
-        st.metric("Pages", pages)
+        st.metric("Pages", total_pages)
 
     with col2:
-        st.metric("Words", word_count)
+        st.metric("Words", total_word_count)
 
     # 📄 Preview
     st.subheader("Text Preview")
-    st.text_area("Preview", text[:2000], height=300)
+    st.text_area("Preview", all_text[:2000], height=300)
 
 #--------Chunk Information----------------
 

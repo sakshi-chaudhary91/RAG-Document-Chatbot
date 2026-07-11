@@ -100,6 +100,12 @@ This project is being developed step by step to understand every concept of the 
 - Improved Answer Transparency
 - Enhanced Explainability of RAG Responses
 
+### ✅ Version 5.6
+- Upload multiple PDFs at once.
+- Automatically merges text from all uploaded documents.
+- Creates a single FAISS index from all documents.
+- Ask questions across multiple PDFs simultaneously.
+
 
 ---
 
