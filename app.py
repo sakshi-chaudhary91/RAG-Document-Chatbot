@@ -86,7 +86,7 @@ if uploaded_file is not None:
         if query.strip():
             results = semantic_search(query, index, chunks)
             if results:
-                context = "\n\n".join(results)
+                context = "\n\n".join([chunk for _, chunk in results])
                 with st.spinner("Generating AI Answer..."):
                     ai_answer = generate_answer(context, query)
                     
@@ -97,12 +97,15 @@ if uploaded_file is not None:
                     st.success("Answer Generated Successfully!")
                     st.caption("💡 Answer generated using Retrieval-Augmented Generation (RAG) with Google Gemini 2.5 Flash.")
                     with st.expander("📌 View Retrieved Chunks"):
-                        for i, res in enumerate(results, 1):
-                            st.markdown(f"**Chunk {i}:**")
-                            st.info(res)
+                        for i, (idx, chunk) in enumerate(results, 1):
+                            st.markdown(f"### 📄 Source {i} (Chunk {idx + 1})")
+                            st.info(chunk)
                         
                     st.subheader("🤖 AI Answer")
                     st.info(ai_answer)
+                    st.subheader("📚 Sources Used")
+                    for idx, _ in results:
+                        st.markdown(f"- 📄 Chunk {idx + 1}")
             else:
                 st.warning("No relevant information found in the document.")
         else:

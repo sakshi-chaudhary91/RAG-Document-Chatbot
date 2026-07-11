@@ -9,5 +9,5 @@ def semantic_search(query, index, chunks, k=3):
 
     results = []
     for idx in indices[0]:
-        results.append(chunks[idx])
+        results.append((idx, chunks[idx]))
     return results

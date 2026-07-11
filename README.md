@@ -92,6 +92,14 @@ This project is being developed step by step to understand every concept of the 
 - Added RAG Information Caption
 - Improved Overall User Interface
 
+### ✅ Version 5.5
+
+- Added Source Attribution
+- Display Chunk Numbers with Retrieved Context
+- Added "Sources Used" Section
+- Improved Answer Transparency
+- Enhanced Explainability of RAG Responses
+
 
 ---
 
