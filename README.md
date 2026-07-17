@@ -6,6 +6,23 @@ This project is being developed step by step to understand every concept of the 
 
 ---
 
+# 📸 Project Preview
+
+<h2>🏠 Home Page</h2>
+
+<p align="center">
+  <img src="screenshots/home.png" width="800">
+</p>
+
+<h2>📊 ATS Dashboard</h2>
+
+<p align="center">
+  <img src="screenshots/chatbot.png" width="800">
+</p>
+
+
+---
+
 # ✨ Features
 
 ```text
