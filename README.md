@@ -216,16 +216,10 @@ streamlit run app.py
 
 ---
 
-# 🚀 Future Improvements
+# 🌐 Live Demo
 
 ```text
-- 📚 Multiple PDF Support
-- 📝 Source Citations
-- ⚡ Embedding & FAISS Caching
-- 📄 Download Answer as PDF
-- 📋 Copy Answer Button
-- 🎨 ChatGPT-style UI
-- 🔄 Streaming AI Responses
+https://rag-document-chatbot-91.streamlit.app/
 ``` 
 
 ---
